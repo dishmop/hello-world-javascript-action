@@ -1,5 +1,10 @@
 const core = require('@actions/core');
 const github = require('@actions/github');
+const { isPlainObject } = require('is-plain-object');
+
+isPlain = isPlainObject(Object.create({}));
+
+console.log(`is plain: ${isPlain}`);
 
 try{
     // 'who-to-greet' input defined in action metadata file (test)
